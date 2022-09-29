@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
         listItens = findViewById(R.id.listItens);
 
-        //Cria adaptador para a lista
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 getApplicationContext(),
                 android.R.layout.simple_list_item_1,
@@ -33,10 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 itens
         );
 
-        //Adiciona adaptador à lista
         listItens.setAdapter(adapter);
 
-        //Adiciona clique na lista
         listItens.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
